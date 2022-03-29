@@ -17,7 +17,7 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.rout)
     // this.rout.snapshot.queryParams[0];
-    this.userService.getUsers();
+    // this.userService.getUsers();
    this.id = this.rout.snapshot.paramMap.get('id');
    this.user = this.userService.getUserDetails(this.id!);
    console.log(this.user);

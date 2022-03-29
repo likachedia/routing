@@ -5,16 +5,18 @@ import { User, UserElement } from './model';
   providedIn: 'root'
 })
 export class UsersService implements OnInit{
-  
+
   users: User[] | undefined;
   userList: UserElement[] | undefined;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
     this.users = this.getUsers();
     console.log(this.users);
     this.userList = this.getUserList();
+  }
+
+  ngOnInit(): void {
+
   }
 
   getUsers(): User[] {
